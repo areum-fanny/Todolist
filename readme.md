@@ -1,4 +1,4 @@
-### Web Application that displays a To Do List
+# Web Application that displays a To Do List
 
 The application displays the pending tasks and completed tasks. There is an option to add a task, mark a task as completed and delete/remove a task. The tasks have a title and a deadline. The data is stored in SQLite. The tasks are ordered by deadline.
 
