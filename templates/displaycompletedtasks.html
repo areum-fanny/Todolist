@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% block title %} <h1>Completed Tasks </h1>{% endblock %} {% block content %}
+
+{% for task in tasks %}
+<div class="displaytasks" id=`{{task[0]}}`>
+  <p class="title">{{task[1][0]}}</p>
+  <h4 class="deadline">{{task[1][1]}}</h4>
+  <button class="deletetask" type="button"
+    onclick="window.location.href= '{{url_for('deletecompletedtask', id=task[0]) }}';">Remove</button>
+</div>
+<hr>
+{% endfor %} {% endblock %}

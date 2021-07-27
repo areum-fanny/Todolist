@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+  <script>
+    function addTask() {
+      if (document.getElementById("addTask").style.display == "none") {
+        document.getElementById("addTask").style.display = "block";
+      }
+      else {
+        document.getElementById("addTask").style.display = "none"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    {% block title %} {% endblock %}
+  </div>
+
+  <div id="navbar">
+    <button type="button" onclick="window.location.href= '{{url_for('index') }}';">Pending Tasks</button>
+    <button type="button" onclick="window.location.href= '{{url_for('completedtasks') }}';">Completed Tasks</button>
+    <button type="button" onclick="addTask()">Add task</button>
+  </div>
+  <form id="addTask" method='post' style="display: none;">
+    <div class="formEntryField">
+      <label for="todo">Task</label><br>
+      <input type="text" id="todo" name="todo" required><br>
+    </div>
+    <div class=formEntryField>
+      <label for="deadline">Deadline:</label><br>
+      <input type="datetime-local" id="deadline" name="deadline" required><br><br>
+    </div>
+    <div class=formEntryField>
+      <input type="submit" value="Create">
+    </div>
+  </form>
+  {% block content %} {% endblock %}
+
+</body>
+
+</html>

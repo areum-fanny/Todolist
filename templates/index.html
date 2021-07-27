@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} <h1>Pending Tasks</h1>{% endblock %}
+{% block content %}
+
+{% for task in tasks %}
+<div class="displaytasks" id="`{{task[0]}}`">
+    <p class="title">{{task[1][0]}}</p>
+    <h4 class="deadline">{{task[1][1]}}</h4>
+    <div class="options">
+        <div class="complete">
+            <input class="checkbox" type="checkbox"
+                onclick="window.location.href= '{{url_for('completetask', id=task[0]) }}';" />
+            <label>Complete</label>
+        </div>
+        <div class="remove">
+            <input class="checkbox" type="checkbox"
+                onclick="window.location.href= '{{url_for('delete', id=task[0]) }}';" />
+            <label>Remove</label>
+        </div>
+    </div>
+</div>
+
+<hr />
+{% endfor %} {% endblock %}

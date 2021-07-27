@@ -1,0 +1,103 @@
+.title {
+    text-align: center;
+    margin:0 auto;
+    padding-top:5px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    padding:5px;
+}
+.displaytasks{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgb(236, 227, 227);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    width:500px;
+    padding:20px;
+}
+.deadline {
+    text-align: center;
+    margin:0 auto;
+    padding:2px;
+}
+.options{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: lightskyblue;
+    align-items: stretch;
+    padding: 0px;
+}
+.complete, .remove {
+   
+    flex-basis: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 3px;
+}
+.complete {
+    background-color: lightgreen;
+}
+.remove {
+    background-color: lightsalmon;
+}
+.remove:hover,.deletetask:hover {
+    transition: 220ms all ease-in-out;
+    background-color: rgb(252, 139, 95);
+}
+.complete:hover {
+    transition: 220ms all ease-in-out;
+    background-color: rgb(108, 238, 108);
+}
+.editButton {
+    position: absolute;
+    top: -6px;
+    right: -1px;
+    font-size: 18px;
+}
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.deletetask {
+    padding:5px;
+    align-items: stretch;
+    background-color: lightsalmon;
+    text-align: center;
+}
+#addTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+}
+.formEntryField {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
